@@ -7,20 +7,14 @@ import styles from './styles.css';
 
 const Canvas = (props) => {
   const {
-    cardTypes, cards, addCardOnCanvas, draggableType,
+    cardTypes, cards, drop, draggableType,
   } = props;
-
-
-  const drop = (event) => {
-    const type = event.dataTransfer.getData('type');
-    addCardOnCanvas(type);
-  };
 
   const allowDrop = (event) => {
     event.preventDefault();
   };
 
-  const selecetColumnCards = (type) => cards.filter((c) => c.type === type);
+  const selecetColumnCards = (type) => cards.filter((card) => card.type === type);
 
   const renderColumns = () => cardTypes.map((type) => {
     const title = `Type ${type}`;
@@ -39,20 +33,20 @@ const Canvas = (props) => {
   });
 
   return (
-    <div
+    <section
       className={styles.canvas}
       onDrop={drop}
       onDragOver={allowDrop}
     >
       {renderColumns()}
-    </div>
+    </section>
   );
 };
 
 Canvas.propTypes = {
   cards: PropTypes.array.isRequired,
   cardTypes: PropTypes.array.isRequired,
-  addCardOnCanvas: PropTypes.func.isRequired,
+  drop: PropTypes.func.isRequired,
   draggableType: PropTypes.string.isRequired,
 };
 

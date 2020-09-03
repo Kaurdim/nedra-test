@@ -1,12 +1,8 @@
-:root {
-  --card-margin: 12px;
-}
-
 .panel {
-
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 40px;
-  margin-right: -12px;
-  width: calc(100% + 12px);
+  flex: 0 1 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,  var(--card-size));
+  grid-auto-rows: var(--card-size);
+  grid-gap: 12px;
+  padding: 40px 8px 8px 8px;
 }

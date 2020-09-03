@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { StoreContext } from '../../Store';
+import { StoreContext } from '../Store';
 import Canvas from '../Сanvas/Canvas';
 import Panel from '../Panel/Panel';
 import styles from './styles.css';
@@ -8,7 +8,11 @@ import styles from './styles.css';
 
 const Dashboard = () => {
   const {
-    cardTypes, addCardOnCanvas, cards, setDraggableType, draggableType,
+    cardTypes,
+    addCardOnCanvas,
+    cards,
+    setDraggableType,
+    draggableType,
   } = useContext(StoreContext);
 
   const dragStart = (type) => (event) => {
@@ -20,19 +24,21 @@ const Dashboard = () => {
     draggableType && setDraggableType('');
   };
 
+  const drop = (event) => {
+    const type = event.dataTransfer.getData('type');
+    addCardOnCanvas(type);
+    dragEnd();
+  };
+
   return (
-    <div className={styles.dashboard} onDrop={dragEnd} onDragEnd={dragEnd}>
-      <section className={styles.canvas}>
-        <Canvas
-          cardTypes={cardTypes}
-          cards={cards}
-          addCardOnCanvas={addCardOnCanvas}
-          draggableType={draggableType}
-        />
-      </section>
-      <section className={styles.panel}>
-        <Panel cardTypes={cardTypes} dragStart={dragStart} />
-      </section>
+    <div className={styles.dashboard}>
+      <Canvas
+        cardTypes={cardTypes}
+        cards={cards}
+        draggableType={draggableType}
+        drop={drop}
+      />
+      <Panel cardTypes={cardTypes} dragStart={dragStart} dragEnd={dragEnd} />
     </div>
   );
 };

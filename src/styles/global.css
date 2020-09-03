@@ -11,10 +11,11 @@ body {
 }
 
 :root {
+  --app-width: 1080px;
   --card-border-radius: 3px;
+  --card-size: 60px;
 
   /* colors */
-  --main-bg-color: white;
   --card-type-color: rgb(247, 198, 152);
-  --card-column-color: rgb(194, 216, 173);
+  --card-color: rgb(194, 216, 173);
 }

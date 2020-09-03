@@ -1,10 +1,10 @@
 .columnСard {
-  width: 65px;
-  height: 65px;
+  width: var(--card-size);
+  height: var(--card-size);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--card-column-color);
+  background-color: var(--card-color);
   margin-bottom: 12px;
   cursor: pointer;
   border-radius: var(--card-border-radius);

@@ -17,8 +17,8 @@
 
 
 .cardPalcejolder {
-  width: 65px;
-  height: 65px;
+  width: var(--card-size);
+  height: var(--card-size);
   margin-bottom: 12px;
   border-radius: var(--card-border-radius);
 }

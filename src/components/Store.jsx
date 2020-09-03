@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 
 export const StoreContext = React.createContext();
 
-export const CARD_TYPES = ['1', '2', '3', '4'];
+export const CARD_TYPES = ['1', '2', '3', '4', '5'];
 
 function Store(props) {
   const { children } = props;
 
   const [cards, setCards] = useState([]);
+  const [cardTypes] = useState(CARD_TYPES);
   const [cardForRemove, setCardForRemove] = useState(null);
   const [draggableType, setDraggableType] = useState('');
 
@@ -50,7 +51,7 @@ function Store(props) {
     <StoreContext.Provider value={{
       cards,
       cardForRemove,
-      cardTypes: CARD_TYPES,
+      cardTypes,
       draggableType,
       addCardOnCanvas,
       selectCardForRemove,

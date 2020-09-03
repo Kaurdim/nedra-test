@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
 
-import { StoreContext } from '../../Store';
-import СolumnСard from '../СolumnСard/СolumnСard';
+import { StoreContext } from '../Store';
+import Сard from '../Сard/Сard';
 import styles from './styles.css';
 
 
@@ -16,7 +16,7 @@ const CardsColumn = (props) => {
     const selected = Boolean(cardForRemove && card.id === cardForRemove.id);
 
     return (
-      <СolumnСard
+      <Сard
         key={`${card.id}_${card.type}`}
         card={card}
         select={selectCardForRemove}

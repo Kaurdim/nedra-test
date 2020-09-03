@@ -7,7 +7,7 @@
   box-shadow: 0 4px 14px rgba(0,0,0,.3);
 }
 
-.canvas {
+/* .canvas {
   flex: 1;
   padding: 8px;
   border-right: 2px solid rgb(221, 213, 213);
@@ -16,4 +16,4 @@
 .panel {
   flex: 0 1 300px;
   padding: 8px;
-}
+} */

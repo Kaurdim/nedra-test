@@ -6,26 +6,28 @@ import styles from './styles.css';
 
 
 const Panel = (props) => {
-  const { cardTypes, dragStart } = props;
+  const { cardTypes, dragStart, dragEnd } = props;
 
   const renderCardTypes = () => cardTypes.map((type) => (
     <CardType
       key={type}
       type={type}
       dragStart={dragStart(type)}
+      dragEnd={dragEnd}
     />
   ));
 
   return (
-    <div className={styles.panel}>
+    <section className={styles.panel}>
       {renderCardTypes()}
-    </div>
+    </section>
   );
 };
 
 Panel.propTypes = {
   cardTypes: PropTypes.array.isRequired,
   dragStart: PropTypes.func.isRequired,
+  dragEnd: PropTypes.func.isRequired,
 };
 
 export default Panel;

@@ -5,7 +5,7 @@ import cn from 'classnames';
 import styles from './styles.css';
 
 
-const СolumnСard = (props) => {
+const Сard = (props) => {
   const { card, select, selected } = props;
   const handleSelect = () => {
     select(card);
@@ -21,14 +21,14 @@ const СolumnСard = (props) => {
   );
 };
 
-СolumnСard.propTypes = {
+Сard.propTypes = {
   card: PropTypes.object.isRequired,
   select: PropTypes.func.isRequired,
   selected: PropTypes.bool,
 };
 
-СolumnСard.defaultProps = {
+Сard.defaultProps = {
   selected: false,
 };
 
-export default СolumnСard;
+export default Сard;

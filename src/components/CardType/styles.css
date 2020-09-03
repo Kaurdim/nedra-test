@@ -1,6 +1,5 @@
 
 .card {
-  flex: 0 1 calc(25% - var(--card-margin));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,8 +11,7 @@
   user-select: none;
 }
 
-.card:before {
-  content: '';
-  float: left;
-  padding-top: 100%;
+.card:active {
+  opacity: 0.7;
+  transform: scale(0.95);
 }

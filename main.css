@@ -1,0 +1,125 @@
+.\421 ard_columnСard_KDQfR {
+  width: var(--card-size);
+  height: var(--card-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--card-color);
+  margin-bottom: 12px;
+  cursor: pointer;
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
+}
+
+.\421 ard_columnСard_KDQfR.\421 ard_selected__nQ7G {
+  box-shadow: 0 0 1px 2px rgb(40, 189, 40);
+}
+.CardsColumn_column_2E5tb {
+  flex: 0 1 140px;
+}
+
+.CardsColumn_columnHeader_rzU5L {
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.CardsColumn_columnContent_3iJiA {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 8px;
+}
+
+
+.CardsColumn_cardPalcejolder_1IIyh {
+  width: var(--card-size);
+  height: var(--card-size);
+  margin-bottom: 12px;
+  border-radius: var(--card-border-radius);
+}
+
+.CardsColumn_cardPalcejolder_1IIyh.CardsColumn_active_3vLz4 {
+  background-color: rgba(122, 175, 219, 0.5);
+  border: 1px dashed blue;
+}
+.\421 anvas_canvas_wj2xE {
+  flex: 1;
+  padding: 8px;
+  border-right: 2px solid rgb(221, 213, 213);
+  display: flex;
+}
+
+
+.CardType_card_1GneE {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--card-margin);
+  background-color: rgb(247, 198, 152);
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
+  cursor: grab;
+  user-select: none;
+}
+
+.CardType_card_1GneE:active {
+  opacity: 0.7;
+  transform: scale(0.95);
+}
+.Panel_panel_3rYEr {
+  flex: 0 1 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,  var(--card-size));
+  grid-auto-rows: var(--card-size);
+  grid-gap: 12px;
+  padding: 40px 8px 8px 8px;
+}
+
+
+.Dashboard_dashboard_VXRiS {
+  display: flex;
+  min-height: calc(100vh - 2rem);
+  padding: 8px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.3);
+}
+
+/* .canvas {
+  flex: 1;
+  padding: 8px;
+  border-right: 2px solid rgb(221, 213, 213);
+}
+
+.panel {
+  flex: 0 1 300px;
+  padding: 8px;
+} */
+.components_container_1tO0_ {
+  width: var(--app-width);
+  min-width: 300px;
+  max-width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+:root {
+  --app-width: 1080px;
+  --card-border-radius: 3px;
+  --card-size: 60px;
+
+  /* colors */
+  --card-type-color: rgb(247, 198, 152);
+  --card-color: rgb(194, 216, 173);
+}

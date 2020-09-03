@@ -1,11 +1,14 @@
 {
+  "homepage": "http://Kaurdim.github.io/nedra-test",
   "name": "nedra-test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Dmitriy Kaurov",
   "license": "ISC",

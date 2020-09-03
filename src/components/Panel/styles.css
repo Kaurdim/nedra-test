@@ -1,0 +1,12 @@
+:root {
+  --card-margin: 12px;
+}
+
+.panel {
+
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  margin-right: -12px;
+  width: calc(100% + 12px);
+}

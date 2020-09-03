@@ -1,0 +1,19 @@
+
+.card {
+  flex: 0 1 calc(25% - var(--card-margin));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--card-margin);
+  background-color: rgb(247, 198, 152);
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
+  cursor: grab;
+  user-select: none;
+}
+
+.card:before {
+  content: '';
+  float: left;
+  padding-top: 100%;
+}

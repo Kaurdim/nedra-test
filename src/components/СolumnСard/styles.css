@@ -1,0 +1,16 @@
+.columnСard {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--card-column-color);
+  margin-bottom: 12px;
+  cursor: pointer;
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
+}
+
+.columnСard.selected {
+  box-shadow: 0 0 1px 2px rgb(40, 189, 40);
+}

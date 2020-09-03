@@ -1,0 +1,20 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+:root {
+  --card-border-radius: 3px;
+
+  /* colors */
+  --main-bg-color: white;
+  --card-type-color: rgb(247, 198, 152);
+  --card-column-color: rgb(194, 216, 173);
+}
